@@ -1,7 +1,7 @@
 # TurGangSMOD
 
 
-1.19.2 icin Mavi Bugdayda kullanilmasi uzerine yarattigim acik kaynak client tarafli set calma modu.
+1.2-.4 icin Mavi Bugdayda kullanilmasi uzerine yarattigim acik kaynak client tarafli set calma modu.
 Discord Sunucumuz: https://discord.gg/aGd2D3Ajt8
 Kisisel discordum: turgangs
 
