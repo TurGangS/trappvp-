@@ -12,6 +12,9 @@ base {
 
 repositories {
 	mavenCentral()
+	maven { url "https://maven.shedaniel.me/" }
+	maven { url "https://maven.terraformersmc.com/releases/" }
+
 }
 
 loom {
@@ -30,6 +33,10 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modApi("me.shedaniel.cloth:cloth-config-fabric:11.1.136") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
 }
 
 processResources {

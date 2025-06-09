@@ -17,8 +17,8 @@ public class ChatHudMixin {
 		String msg = message.getString().trim();
 
 		if (DiggerClient.isAutoLeaveEnabled()) {
-			if (msg.contains("cik")) {
-				client.getNetworkHandler().sendChatMessage("bay bay");
+			if (msg.contains("size ışınlandı!")) {
+				client.getNetworkHandler().sendChatMessage("bay bay :)");
 				client.getNetworkHandler().getConnection()
 						.disconnect(Text.literal("Görev başarıyla tamamlandı B-)"));
 				return;

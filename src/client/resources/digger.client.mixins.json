@@ -2,8 +2,7 @@
 	"package": "turgangs.com.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
-		"ChatHudMixin",
-		"ChatSendMixin"
+		"ChatHudMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
