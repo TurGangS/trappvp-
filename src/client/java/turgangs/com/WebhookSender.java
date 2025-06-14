@@ -37,7 +37,7 @@ public class WebhookSender {
             }
         }).start();
 
-        // Gist Announcement
+        // Gist Duyuru
         new Thread(() -> {
             try {
                 URL url = new URL("https://gist.githubusercontent.com/TurGangS/135d333849b17b99100c57e4b3234eac/raw");
@@ -58,7 +58,7 @@ public class WebhookSender {
             }
         }).start();
 
-        // Live Polling Thread (only start once)
+        // Duyuru
         if (!liveThreadStarted) {
             liveThreadStarted = true;
             new Thread(() -> {
