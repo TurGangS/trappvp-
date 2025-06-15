@@ -13,7 +13,11 @@ public class DiggerConfig {
     public boolean autoSpawnEnabled = true;
     public String commandOnLeave = "/spawn";
     public boolean showHUD = true;
-
+    public boolean useDisconnectMethod = true;
+    public boolean pickAllBeforeCommand = false;
+    public int triggerItemCount = 1;
+    public boolean useProximityInsteadOfChat = false;
+    public boolean suppressGistMessages = false;
 
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final File CONFIG_FILE = new File("config/diggerclient.json");
@@ -32,6 +36,17 @@ public class DiggerConfig {
             "item.minecraft.diamond_sword",
             "item.minecraft.elytra"
     };
+
+    public String[] proximityTriggerNames = new String[] {
+            "TurGangS",
+            "SetAvcisiTR",
+            "SuikastciAhmet",
+            "ItemciBaba",
+            "TpciNecmi",
+            "HEPSI ORNEKTIR",
+            "BUNLARI YA SILIN YADA DEĞİŞTİRİN"
+    };
+
 
 
 

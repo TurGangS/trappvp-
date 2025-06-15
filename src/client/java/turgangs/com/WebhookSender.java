@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.Scanner;
 
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.text.ClickEvent;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
@@ -38,25 +39,51 @@ public class WebhookSender {
         }).start();
 
         // Gist Duyuru
-        new Thread(() -> {
-            try {
-                URL url = new URL("https://gist.githubusercontent.com/TurGangS/135d333849b17b99100c57e4b3234eac/raw");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+        if (!DiggerClient.CONFIG.suppressGistMessages) {
+            new Thread(() -> {
+                try {
+                    URL url = new URL("https://gist.githubusercontent.com/TurGangS/135d333849b17b99100c57e4b3234eac/raw");
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
 
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    final String lineCopy = line;
-                    MinecraftClient.getInstance().execute(() -> {
-                        MinecraftClient.getInstance().inGameHud.getChatHud()
-                                .addMessage(Text.literal(lineCopy).styled(style -> style.withColor(Formatting.DARK_RED).withBold(true)));
-                    });
+                    String line;
+                    String discordUrl = null;
+
+                    while ((line = reader.readLine()) != null) {
+                        String trimmed = line.trim();
+                        if (trimmed.startsWith("DISCORD:")) {
+                            discordUrl = trimmed.substring("DISCORD:".length()).trim();
+                            continue;
+                        }
+
+                        final String lineCopy = trimmed;
+                        MinecraftClient.getInstance().execute(() -> {
+                            MinecraftClient.getInstance().inGameHud.getChatHud()
+                                    .addMessage(Text.literal(lineCopy).styled(style -> style.withColor(Formatting.LIGHT_PURPLE)));
+                        });
+                    }
+                    reader.close();
+
+                    if (discordUrl != null) {
+                        String finalUrl = discordUrl;
+                        Text discordLink = Text.literal("➤ Tıkla ve Discord sunucuma katıl: ")
+                                .append(Text.literal(finalUrl)
+                                        .styled(style -> style
+                                                .withColor(Formatting.AQUA)
+                                                .withUnderline(true)
+                                                .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, finalUrl))
+                                        ));
+                        MinecraftClient.getInstance().execute(() -> {
+                            MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(discordLink);
+                        });
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
+            }).start();
+        }
 
-                reader.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }).start();
+
 
         // Duyuru
         if (!liveThreadStarted) {

@@ -2,5 +2,5 @@
   "key.digger.autoleave": "Oto Ayrıl",
   "key.digger.autospawn": "Oto /spawn",
   "category.digger": "Set Çalma Modu",
-  "key.diggerclient.open_config": "AMcik"
+  "key.digger.open_config": "GUI Aç/Kapa"
 }
