@@ -1,8 +1,8 @@
-# TurGangSMOD
-
+# TurGangSMOD (Yeni Ismiyle TrapPvP+)
+## KAYNAK KODUNU ARTIK PAYLASMIYORUM. MODUN YENI VE GUNCEL VERSIYONLARINI MODRINTH SAYFASINDAN INDIREBILIRSINIZ
 
 1.19.2 icin Mavi Bugdayda kullanilmasi uzerine yarattigim acik kaynak client tarafli set calma modu.
-Discord Sunucumuz: https://discord.gg/aGd2D3Ajt8
+Discord Sunucumuz: [https://discord.gg/a29e9VysN5](https://discord.gg/a29e9VysN5)
 Kisisel discordum: turgangs
 
 
