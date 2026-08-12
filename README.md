@@ -1,21 +1,23 @@
-# TurGangSMOD (Yeni Ismiyle TrapPvP+)
-## KAYNAK KODUNU ARTIK PAYLASMIYORUM. MODUN YENI VE GUNCEL VERSIYONLARINI MODRINTH SAYFASINDAN INDIREBILIRSINIZ
-
-1.19.2 icin Mavi Bugdayda kullanilmasi uzerine yarattigim acik kaynak client tarafli set calma modu.
-Discord Sunucumuz: [https://discord.gg/a29e9VysN5](https://discord.gg/a29e9VysN5)
-Kisisel discordum: turgangs
+# TrapPvP+
+## The source code is no longer public for the later versions of TrapPvP+
+### Download the newest versions from [Modrinth](https://modrinth.com/mod/trappvp+).
 
 
-## Özellikler
+A client sided Fabric Minecraft mod for automating actions.
+Discord Server invite: [https://discord.gg/a29e9VysN5](https://discord.gg/a29e9VysN5)
+Discord: turgangs
+
+
+## Özellikler/Features
 - Oto Spawn / Oto Ayril
-- Minecraftin kendi keybind sayfasindan bu tuslari togglelayabilmek
-= etc. sonra eklerim
+- Toggles
 
-## Kontroller
+
+## Kontroller/Controls
 - `B` → Default Toggle Oto Ayril
-- `V` → Default Toggle Otospawn
+- `V` → Default Toggle Oto Spawn
 
-## Gereksinimler
+## Gereksinimler/Requirements
 -Fabric API
 
 ## License
