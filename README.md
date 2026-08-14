@@ -1,5 +1,5 @@
 # TrapPvP+
-## The source code is no longer public for the later versions of TrapPvP+
+## There is no open-source code for the later versions of TrapPvP+
 ### Download the newest versions from [Modrinth](https://modrinth.com/mod/trappvp+).
 
 
